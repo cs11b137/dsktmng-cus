@@ -51,7 +51,9 @@ a {
 }
 
 .main-layout .logo {
-  line-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: none;
   width: 170px;
 }
@@ -75,11 +77,11 @@ a {
 }
 
 .nav {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-right: 50px;
-}
-
-.nav .nav-item {
-  line-height: 72px;
 }
 
 .avatar {
@@ -461,4 +463,97 @@ a {
 
 .center-tips > span {
   vertical-align: middle;
+}
+
+.main {
+  position: absolute;
+  top: 72px;
+  bottom: 0;
+  width: 100%;
+  background-color: #f6f6f6;
+  box-sizing: border-box;
+  padding: 40px 140px;
+}
+
+.main-hd {
+  max-width: 1640px;
+  background: #ffffff;
+  box-shadow: 0px 2px 0px 0px rgba(233, 233, 233, 0.5);
+  border-radius: 8px;
+  padding: 12px 0;
+}
+
+.main-hd-tt {
+  font-size: 18px;
+  padding: 20px 70px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.main-hd-panel {
+  padding: 30px 70px 20px;
+}
+
+.main-hd-money {
+  font-weight: bold;
+  font-size: 50px;
+  vertical-align: middle;
+  margin-right: 65px;
+}
+
+.main-hd-btn {
+  color: #165dff !important;
+  background-color: #fff;
+  border-color: #6c99ff !important;
+}
+
+.main-hd-a {
+  overflow: hidden;
+  margin-left: 28px;
+  vertical-align: middle;
+}
+
+.main-list-container {
+  margin-right: -15px;
+}
+
+.main-list {
+  max-width: 1640px;
+  margin: 20px auto 0;
+}
+
+.main-item {
+  position: relative;
+  float: left;
+  width: calc(33.3% - 15px);
+  background: #ffffff;
+  border-radius: 8px;
+  height: 220px;
+  margin-right: 15px;
+}
+
+.main-item img {
+  position: absolute;
+  bottom: 14px;
+  right: 26px;
+  width: 56px;
+  height: 45px;
+}
+
+.main-item h3 {
+  margin: 50px 40px 0;
+  font-size: 20px;
+}
+
+.main-item p {
+  margin: 14px 0 0 40px;
+  color: #666666;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: #bababa;
+  padding: 30px 0;
 }
