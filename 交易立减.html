@@ -33,8 +33,8 @@
 							活动管理
 						</a>
 						<dl class="layui-nav-child">
-							<dd class="layui-this"><a href="javascript:;">优惠券</a></dd>
-							<dd><a href="javascript:;">交易立减</a></dd>
+							<dd><a href="javascript:;">优惠券</a></dd>
+							<dd class="layui-this"><a href="javascript:;">交易立减</a></dd>
 							<dd><a href="javascript:;">礼品卡</a></dd>
 						</dl>
 					</li>
@@ -72,22 +72,16 @@
 							<img class="marketing-center" src="./static/images/icon-marketing-center.png" alt="">
 							营销中心</a>
 						<a href="">活动管理</a>
-						<a href="">优惠券</a>
+						<a href="">交易立减</a>
 					</span>
 				</div>
 
 				<!-- 搜索框 -->
 				<div class="search-box">
-					<div class="layui-tab layui-tab-brief">
-						<ul class="layui-tab-title">
-							<li class="layui-this">券活动管理</li>
-							<li>券模板管理</li>
-						</ul>
-					</div>
 					<form class="layui-form form">
 						<div class="layui-form-item">
 							<div class="layui-inline">
-								<label class="layui-form-label">活动ID</label>
+								<label class="layui-form-label">活动id</label>
 								<div class="layui-input-inline">
 									<input type="text" name="activityId" placeholder="请输入活动ID" class="layui-input">
 								</div>
@@ -131,13 +125,14 @@
 
 				<!-- 数据表格 -->
 				<div class="result-table">
-					<div class="result-table-title">券活动查询结果</div>
+					<div class="result-table-title">交易立减查询结果</div>
 					<div class="table-wrapper">
 						<table class="layui-table" lay-skin="line">
 							<thead>
 								<tr>
 									<th>活动ID</th>
 									<th>活动名称</th>
+									<th>优惠类型</th>
 									<th>创建时间</th>
 									<th>投放到期时间</th>
 									<th>状态</th>
@@ -148,26 +143,14 @@
 								<tr>
 									<td>000H8</td>
 									<td>圣诞大促销</td>
+									<td>定额立减</td>
 									<td>2024-12-26 14:24:51</td>
 									<td>2024-12-26 14:24:51</td>
 									<td>暂停投放</td>
-									<td class="operation-col">详情</td>
-								</tr>
-								<tr>
-									<td>000H8</td>
-									<td>圣诞大促销</td>
-									<td>2024-12-26 14:24:51</td>
-									<td>2024-12-26 14:24:51</td>
-									<td>终止投放</td>
-									<td class="operation-col">详情</td>
-								</tr>
-								<tr>
-									<td>000H8</td>
-									<td>圣诞大促销</td>
-									<td>2024-12-26 14:24:51</td>
-									<td>2024-12-26 14:24:51</td>
-									<td>已完结</td>
-									<td class="operation-col">详情</td>
+									<td class="operation-col">
+										<a class="operation-col-detail" href="javascript:;">详情</a>
+										<a class="operation-col-data" href="javascript:;">领用数据</a>
+									</td>
 								</tr>
 							</tbody>
 						</table>
@@ -216,9 +199,19 @@
 			});
 
 			// 详情按钮点击事件
-			$(document).on('click', '.operation-col', function () {
+			$(document).on('click', '.operation-col-detail', function () {
 				var activityId = $(this).parent().find('td:first').text();
 				layer.msg('查看活动ID：' + activityId + ' 的详情');
+			});
+
+			// 领用数据按钮点击事件
+			$(document).on('click', '.operation-col-data', function () {
+				var content = '<div class="tips-title">圣诞大促销</div>' +
+					'<div class="tips-item"><span>抵用次数</span><span>36</span></div>' +
+					'<div class="tips-item"><span>回退次数</span><span>10</span></div>';
+				layer.tips(content, this, {
+					tips: [1, '#fff']
+				});
 			});
 		});
 	</script>
