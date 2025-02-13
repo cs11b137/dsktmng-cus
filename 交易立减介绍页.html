@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>营销中心 - 活动管理</title>
+    <link rel="stylesheet" href="./static/layui/css/layui.css" />
+    <link rel="stylesheet" href="./static/css/style.css" />
+  </head>
+
+  <body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin main-layout">
+      <!-- 顶部导航 -->
+      <div class="layui-header header">
+        <div class="layui-logo logo">
+          <img
+            class="logo-img"
+            src="./static/images/icon-marketing-center-logo.png"
+            alt="Logo" />
+        </div>
+        <ul class="layui-nav layui-layout-right nav">
+          <li class="layui-nav-item nav-item">
+            <span class="avatar">NIVEA</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 左侧导航 -->
+      <div class="layui-side side">
+        <div class="layui-side-scroll side-scroll">
+          <ul class="layui-nav layui-nav-tree nav-tree">
+            <li class="layui-nav-item layui-nav-itemed">
+              <a href="javascript:;">
+                <img
+                  src="./static/images/icon-campaign-management.png"
+                  class="menu-icon"
+                  alt="" />
+                活动管理
+              </a>
+              <dl class="layui-nav-child">
+                <dd><a href="javascript:;">优惠券</a></dd>
+                <dd class="layui-this"><a href="javascript:;">交易立减</a></dd>
+                <dd><a href="javascript:;">礼品卡</a></dd>
+              </dl>
+            </li>
+            <li class="layui-nav-item">
+              <a href="javascript:;">
+                <img
+                  src="./static/images/icon-funding-management.png"
+                  class="menu-icon"
+                  alt="" />
+                出资管理
+              </a>
+              <dl class="layui-nav-child">
+                <dd><a href="javascript:;">预算管理</a></dd>
+                <dd><a href="javascript:;">出资授权</a></dd>
+              </dl>
+            </li>
+            <li class="layui-nav-item">
+              <a href="javascript:;">
+                <img
+                  src="./static/images/icon-activity-statistics.png"
+                  class="menu-icon"
+                  alt="" />
+                活动明细统计
+              </a>
+              <dl class="layui-nav-child">
+                <dd><a href="javascript:;">活动核销明细</a></dd>
+                <dd><a href="javascript:;">数据统计与凭证</a></dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 内容主体 -->
+      <div class="layui-body body">
+        <div class="main-container">
+          <!-- 面包屑导航 -->
+          <div class="breadcrumb-container">
+            <span class="layui-breadcrumb">
+              <a href="">
+                <img
+                  class="marketing-center"
+                  src="./static/images/icon-marketing-center.png"
+                  alt="" />
+                营销中心</a
+              >
+              <a href="">交易立减详情</a>
+            </span>
+          </div>
+
+          <div class="activity-info">
+            <h3>交易立减</h3>
+            <p class="activity-desc">
+              顾客无需领取，支付时直接抵扣订单金额。支持定额立减、折扣立减、随机立减（例如：满N元立减Y元、满N元立享M折、随机金额优惠）
+            </p>
+          </div>
+
+          <div class="activity-detail">
+            <div class="intro-tt">使用示例</div>
+            <p class="intro-desc">
+              商家创建立减优惠后，顾客无需领取优惠，当顾客使用通联收款码(当面付)交易时，优惠券会在交易时自动核销/抵扣
+            </p>
+            <div class="intro-sub">普通当面付营销使用示例</div>
+            <div class="intro-list">
+              <div class="intro-item">
+                <img src="./static/images/dangmianfuyx-1.png" alt="" />
+                <div>
+                  <span>1</span>
+                  <p>扫当面付码牌</p>
+                </div>
+              </div>
+              <img
+                class="intro-jd"
+                src="./static/images/jingduzhishi.png"
+                alt="" />
+              <div class="intro-item">
+                <img src="./static/images/dangmianfuyx-2.png" alt="" />
+                <div>
+                  <span>2</span>
+                  <p>扫码输入金额页面</p>
+                </div>
+              </div>
+              <img
+                class="intro-jd"
+                src="./static/images/jingduzhishi.png"
+                alt="" />
+              <div class="intro-item">
+                <img src="./static/images/dangmianfuyx-3.png" alt="" />
+                <div>
+                  <span>3</span>
+                  <p>选择优惠页面</p>
+                </div>
+              </div>
+              <img
+                class="intro-jd"
+                src="./static/images/jingduzhishi.png"
+                alt="" />
+              <div class="intro-item">
+                <img src="./static/images/dangmianfuyx-4.png" alt="" />
+                <div>
+                  <span>4</span>
+                  <p>支付完成页面</p>
+                </div>
+              </div>
+            </div>
+            <div class="intro-sub">订单当面付营销使用示例</div>
+            <div class="intro-list">
+              <div class="intro-item">
+                <img src="./static/images/dingdanyx-1.png" alt="" />
+                <div>
+                  <span>1</span>
+                  <p>打开订单当面付</p>
+                </div>
+              </div>
+              <img
+                class="intro-jd"
+                src="./static/images/jingduzhishi.png"
+                alt="" />
+              <div class="intro-item">
+                <img src="./static/images/dingdanyx-2.png" alt="" />
+                <div>
+                  <span>2</span>
+                  <p>选择优惠页面</p>
+                </div>
+              </div>
+              <img
+                class="intro-jd"
+                src="./static/images/jingduzhishi.png"
+                alt="" />
+              <div class="intro-item">
+                <img src="./static/images/dingdanyx-3.png" alt="" />
+                <div>
+                  <span>3</span>
+                  <p>支付完成页面</p>
+                </div>
+              </div>
+            </div>
+            <div class="intro-card">
+              <div class="intro-tt">产品特色</div>
+              <div class="intro-p">
+                <span>自定义配置</span>
+                <span
+                  >可自定义活动标题、活动宣传语、减价面额、减价门槛、可用时间、可用商户、预算、用户领取次数限制</span
+                >
+              </div>
+              <div class="intro-p">
+                <span>资金多样化</span>
+                <span
+                  >支持预充值（预充营销资金，商家实收金额不变）、免充值（无需预充营销资金，扣减商家实收金额）多种营销资金方式</span
+                >
+              </div>
+              <div class="intro-p">
+                <span>自动化匹配</span>
+                <span
+                  >顾客扫通联收款码(当面付)或网上收银交易时，即可直接抵扣订单金额</span
+                >
+              </div>
+              <div class="intro-p">
+                <span>灵活选择性</span>
+                <span>支持定额立减、折扣立减、随机立减活动类型</span>
+              </div>
+            </div>
+            <div class="intro-card">
+              <div class="intro-tt">使用门槛</div>
+              <div class="intro-p">
+                开通收银宝当面付（微信支付 / 支付宝支付 /
+                快捷支付）网上收银（快捷支付）产品
+              </div>
+            </div>
+
+            <div class="intro-btn">
+              <button>联系客户经理申请</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./static/layui/layui.js"></script>
+    <script src="./static/jquery/jquery.min.js"></script>
+    <script>
+      layui.use(["form", "layer", "element"], function () {});
+    </script>
+  </body>
+</html>
